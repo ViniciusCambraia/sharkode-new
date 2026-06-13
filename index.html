@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Geist:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <title>SHARKODE — Nós criamos sites que mordem.</title>
+    <meta name="description" content="A SHARKODE é especializada na criação de sites premium de altíssima performance, interfaces interativas inovadoras e soluções web integradas à nuvem." />
+    <meta name="keywords" content="criação de sites, desenvolvimento web, react, typescript, tailwind, ui/ux design, vercel, agência digital" />
+    <meta name="author" content="Sharkode Platform" />
+
+    <!-- Fetch Interceptor: redireciona assets remotos para locais em /assets -->
+    <script>
+      const originalFetch = window.fetch;
+      window.fetch = function(url, options) {
+        const urlString = typeof url === 'string' ? url : (url && url.url) || '';
+        
+        // 1. Redirect Unicorn Studio Embed Config to local JSON file with cache buster and debug logs
+        if (urlString.includes("bKN5upvoulAmWvInmHza") || urlString.endsWith("5224c16c9fd00d6b_bKN5upvoulAmWvInmHza.js") || urlString.endsWith("5224c16c9fd00d6b_bKN5upvoulAmWvInmHza.json")) {
+          console.log("[FetchInterceptor] Intercepted Unicorn fetch:", urlString);
+          const targetUrl = "/assets/5224c16c9fd00d6b_bKN5upvoulAmWvInmHza.json?t=" + Date.now();
+          return originalFetch(targetUrl, options)
+            .then(res => {
+              console.log("[FetchInterceptor] Fetch status:", res.status);
+              return res.text().then(text => {
+                console.log("[FetchInterceptor] Response snippet:", text.substring(0, 100));
+                try {
+                  JSON.parse(text);
+                  console.log("[FetchInterceptor] JSON validation SUCCESS!");
+                } catch (e) {
+                  console.error("[FetchInterceptor] JSON validation FAILED:", e.message);
+                }
+                return new Response(text, {
+                  headers: { 'Content-Type': 'application/json' }
+                });
+              });
+            });
+        }
+
+        // 2. Map other assets
+        const mapping = {
+          "https://api.iconify.design/lucide.json": "/assets/3e0e02cfb1f78586_lucide.json",
+          "https://api.iconify.design/simple-icons.json": "/assets/d1e6862eccfc4991_simple-icons.json",
+          "https://api.iconify.design/solar.json": "/assets/fa1a71b26665c976_solar.json",
+          "https://assets.unicorn.studio/media/blue_noise_med.png": "/assets/b13e8110a3cff03d_blue_noise_med.png",
+          "https://assets.unicorn.studio/media/glyphs/circles.png": "/assets/5be433a48e8e2b8c_circles.png"
+        };
+        for (const [remote, local] of Object.entries(mapping)) {
+          if (urlString.startsWith(remote)) {
+            return originalFetch(local, options);
+          }
+        }
+        
+        return originalFetch(url, options);
+      };
+    </script>
+
+    <!-- Unicorn Studio WebGL Runtime -->
+    <script src="/assets/298e0c1ae699b618_unicornStudio.umd.js"></script>
+  </head>
+  <body class="bg-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
