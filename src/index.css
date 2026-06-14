@@ -289,25 +289,4 @@ div[style*="--border-gradient"] {
   animation: shark-fin-swim 4s ease-in-out infinite;
 }
 
-/* Bite Hover micro-interaction */
-.bite-hover {
-  transition: clip-path 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.bite-hover:hover {
-  animation: bite-animation 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-
-@keyframes bite-animation {
-  0% {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-  30% {
-    clip-path: polygon(0% 0%, 96% 4%, 86% 28%, 96% 44%, 82% 64%, 96% 84%, 100% 100%, 0% 100%);
-  }
-  100% {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-}
 
