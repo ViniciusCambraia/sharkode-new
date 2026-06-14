@@ -39,7 +39,7 @@ export const HologramBackground: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-black">
-      {/* Native WebM Loop with timeline-synchronized fade transition */}
+      {/* Native WebM Loop with timeline-synchronized fade transition and premium blur filter */}
       <video
         ref={videoRef}
         src="/bg-gradient.webm"
@@ -48,11 +48,17 @@ export const HologramBackground: React.FC = () => {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover transition-opacity duration-150 ease-out"
-        style={{ pointerEvents: 'none', opacity: 0 }}
+        style={{ 
+          pointerEvents: 'none', 
+          opacity: 0,
+          filter: 'blur(30px)',
+          transform: 'scale(1.05)'
+        }}
       />
     </div>
   );
 };
+
 
 
 
