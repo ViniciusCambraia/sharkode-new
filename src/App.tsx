@@ -3,13 +3,13 @@ import { Icon } from '@iconify/react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { TiltCard } from './components/TiltCard';
-import { BorderBeamCard } from './components/BorderBeamCard';
 import { TextScramble } from './components/TextScramble';
 import { showTerminalToast, TerminalToastContainer } from './components/TerminalToast';
 import { Footer } from './components/Footer';
 import { HologramBackground } from './components/HologramBackground';
 import { ROISimulator } from './components/ROISimulator';
 import { Testimonials } from './components/Testimonials';
+import { PortfolioCarousel } from './components/PortfolioCarousel';
 
 export default function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -129,73 +129,8 @@ export default function App() {
       {/* Interactive AI ROI Simulator */}
       <ROISimulator />
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="relative py-32 border-t border-white/5 bg-zinc-950/20">
-        <div className="max-w-7xl mx-auto px-6 z-20 relative">
-          <div className="flex items-center gap-2 mb-6 opacity-60">
-            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-            <span className="text-xs font-mono text-gray-400 tracking-widest uppercase">02 / Nosso Portfólio</span>
-          </div>
-          <h2 className="leading-[1.1] uppercase md:text-5xl text-3xl font-normal text-white tracking-tight font-manrope mb-8 text-reveal-wrapper">
-            <span className="text-reveal-content">
-              <TextScramble text="Casos reais que" /> <span className="text-gray-500"><TextScramble text="geram crescimento" /></span>
-            </span>
-          </h2>
-          <p className="text-gray-400 text-base leading-relaxed mb-16 max-w-3xl font-sans">
-            Explore projetos reais criados e publicados que geraram valor palpável e resultados de alto impacto para nossos clientes.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <BorderBeamCard beamColor="#1a80f8">
-              <span className="text-[10px] font-mono text-blue-400 uppercase tracking-widest mb-2 block">E-Commerce + CRM (+15% Vendas)</span>
-              <h3 className="text-2xl font-semibold text-white mb-4 font-manrope">LUZ DE CRISTO</h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                Desenvolvemos o e-commerce completo, focado em performance extrema e facilidade de uso, impactando diretamente no aumento de vendas digitais da marca.
-              </p>
-              <a href="https://wa.link/rs0buz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-blue-400 hover:text-blue-300 transition-colors">
-                <span>Quero um projeto assim</span>
-                <Icon icon="lucide:arrow-right" />
-              </a>
-            </BorderBeamCard>
-
-            <BorderBeamCard beamColor="#10b981">
-              <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-2 block">Design & Presença Digital (+20% Fluxo)</span>
-              <h3 className="text-2xl font-semibold text-white mb-4 font-manrope">PORTALNOTE</h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                Criação de identidade visual moderna e fachada de destaque na web, fortalecendo a autoridade da marca e impulsionando o fluxo de clientes na loja física.
-              </p>
-              <a href="https://wa.link/rs0buz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 hover:text-emerald-350 transition-colors">
-                <span>Quero um projeto assim</span>
-                <Icon icon="lucide:arrow-right" />
-              </a>
-            </BorderBeamCard>
-
-            <BorderBeamCard beamColor="#8b5cf6">
-              <span className="text-[10px] font-mono text-violet-400 uppercase tracking-widest mb-2 block">Automação de Vendas (+200 Alunos)</span>
-              <h3 className="text-2xl font-semibold text-white mb-4 font-manrope">ESCOLA DO X1</h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                Estruturação do site e automações completas com atendimento por IA para gerenciar leads, fechar vendas e fazer a entrega automatizada do curso.
-              </p>
-              <a href="https://wa.link/rs0buz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-violet-400 hover:text-violet-300 transition-colors">
-                <span>Quero um projeto assim</span>
-                <Icon icon="lucide:arrow-right" />
-              </a>
-            </BorderBeamCard>
-
-            <BorderBeamCard beamColor="#f59e0b">
-              <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest mb-2 block">Landing Page & Conversão</span>
-              <h3 className="text-2xl font-semibold text-white mb-4 font-manrope">FEIRA VOCACIONAL</h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                Desenvolvimento de landing page moderna e persuasiva, aumentando exponencialmente a autoridade digital e a facilidade de conversão de leads do evento.
-              </p>
-              <a href="https://wa.link/rs0buz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-amber-400 hover:text-amber-300 transition-colors">
-                <span>Quero um projeto assim</span>
-                <Icon icon="lucide:arrow-right" />
-              </a>
-            </BorderBeamCard>
-          </div>
-        </div>
-      </section>
+      {/* Portfolio Carousel Section */}
+      <PortfolioCarousel />
 
       {/* Process Section - The Attack Plan */}
       <section id="process" className="relative py-32 border-t border-white/5 max-w-4xl mx-auto px-6 z-20">
