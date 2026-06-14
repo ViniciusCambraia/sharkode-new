@@ -219,10 +219,10 @@ export default function App() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
             
-            <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 glass-panel">
-              <span className="text-xs font-mono text-blue-500/60 uppercase tracking-widest mb-1.5 block">01 / Rastreamento (Kickoff)</span>
+            <div className="border border-white/5 bg-zinc-950/60 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 backdrop-blur-xl">
+              <span className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-1.5 block">01 / Rastreamento (Kickoff)</span>
               <h4 className="text-lg font-semibold text-white mb-3 font-manrope">Mapeamento e Estratégia</h4>
-              <p className="text-xs text-gray-400 leading-relaxed font-sans">
+              <p className="text-xs text-gray-300 leading-relaxed font-sans">
                 Analisamos o seu nicho de mercado, mapeamos as fraquezas dos concorrentes e traçamos o plano de ataque ideal para garantir que seu site ou automação converta muito mais.
               </p>
             </div>
@@ -236,10 +236,10 @@ export default function App() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
             
-            <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 glass-panel">
-              <span className="text-xs font-mono text-blue-500/60 uppercase tracking-widest mb-1.5 block">02 / O Ataque (Execução)</span>
+            <div className="border border-white/5 bg-zinc-950/60 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 backdrop-blur-xl">
+              <span className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-1.5 block">02 / O Ataque (Execução)</span>
               <h4 className="text-lg font-semibold text-white mb-3 font-manrope">Desenvolvimento Agressivo</h4>
-              <p className="text-xs text-gray-400 leading-relaxed font-sans">
+              <p className="text-xs text-gray-300 leading-relaxed font-sans">
                 Criamos o design premium e desenvolvemos o seu site com foco em velocidade máxima de carregamento. Se contratado, integramos agentes de inteligência artificial com n8n para rodar nos bastidores da sua empresa.
               </p>
             </div>
@@ -253,10 +253,10 @@ export default function App() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
             
-            <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 glass-panel">
-              <span className="text-xs font-mono text-blue-500/60 uppercase tracking-widest mb-1.5 block">03 / Domínio (Handoff & Lançamento)</span>
+            <div className="border border-white/5 bg-zinc-950/60 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 backdrop-blur-xl">
+              <span className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-1.5 block">03 / Domínio (Handoff & Lançamento)</span>
               <h4 className="text-lg font-semibold text-white mb-3 font-manrope">Dominação e Autonomia</h4>
-              <p className="text-xs text-gray-400 leading-relaxed font-sans">
+              <p className="text-xs text-gray-300 leading-relaxed font-sans">
                 Seu site vai ao ar indexado e otimizado no Google. Entregamos documentação operacional completa para você e seu time, garantindo controle e independência total sobre o seu produto digital.
               </p>
             </div>
