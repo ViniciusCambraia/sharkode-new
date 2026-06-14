@@ -289,4 +289,78 @@ div[style*="--border-gradient"] {
   animation: shark-fin-swim 4s ease-in-out infinite;
 }
 
+/* Testimonials Carousel & Cards */
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-x-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll-x 45s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scroll-x-reverse 50s linear infinite;
+}
+
+.scroll-group:hover .animate-scroll,
+.scroll-group:hover .animate-scroll-reverse {
+  animation-play-state: paused;
+}
+
+.scroll-group:hover .testimonial-card {
+  opacity: 0.3;
+  transform: scale(0.98) translateZ(0);
+  filter: blur(2px);
+}
+
+.scroll-group .testimonial-card:hover {
+  opacity: 1;
+  transform: scale(1.02) translateZ(0);
+  filter: blur(0px);
+  z-index: 20;
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(26, 128, 248, 0.15),
+    inset 0 0 20px rgba(26, 128, 248, 0.05);
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -100%;
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(59, 130, 246, 0.9),
+      transparent);
+  animation: event-scan 6s linear infinite;
+  animation-delay: var(--delay, 0s);
+  z-index: 30;
+}
+
+@keyframes event-scan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+
 

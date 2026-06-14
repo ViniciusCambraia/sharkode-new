@@ -9,6 +9,7 @@ import { showTerminalToast, TerminalToastContainer } from './components/Terminal
 import { Footer } from './components/Footer';
 import { HologramBackground } from './components/HologramBackground';
 import { ROISimulator } from './components/ROISimulator';
+import { Testimonials } from './components/Testimonials';
 
 export default function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -233,6 +234,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Contact Section */}
       <section id="contact" className="relative py-32 border-t border-white/5">

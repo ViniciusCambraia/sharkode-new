@@ -35,13 +35,13 @@ export const Header: React.FC = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
-          {['#services', '#portfolio', '#process', '#contact'].map((href, i) => (
+          {['#services', '#portfolio', '#process', '#testimonials', '#contact'].map((href, i) => (
             <a
               key={href}
               href={href}
               className="text-zinc-400 hover:text-white text-[11px] font-mono tracking-widest uppercase transition-colors duration-200 hover:text-blue-300"
             >
-              {['Serviços', 'Portfólio', 'Processo', 'Contato'][i]}
+              {['Serviços', 'Portfólio', 'Processo', 'Depoimentos', 'Contato'][i]}
             </a>
           ))}
         </nav>
