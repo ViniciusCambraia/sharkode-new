@@ -196,42 +196,72 @@ export default function App() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="process" className="relative py-32 border-t border-white/5 max-w-7xl mx-auto px-6 z-20">
+      {/* Process Section - The Attack Plan */}
+      <section id="process" className="relative py-32 border-t border-white/5 max-w-4xl mx-auto px-6 z-20">
         <div className="flex items-center gap-2 mb-6 opacity-60">
-          <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+          <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
           <span className="text-xs font-mono text-gray-400 tracking-widest uppercase">03 / Nosso Plano de Ataque</span>
         </div>
-        <h2 className="leading-[1.1] uppercase md:text-5xl text-3xl font-normal text-white tracking-tight font-manrope mb-16 text-reveal-wrapper">
+        <h2 className="leading-[1.1] uppercase md:text-5xl text-3xl font-normal text-white tracking-tight font-manrope mb-20 text-reveal-wrapper">
           <span className="text-reveal-content">
             <TextScramble text="Como traçamos" /> <span className="text-gray-500"><TextScramble text="a rota para o sucesso" /></span>
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 transition-all duration-300 glass-panel">
-            <span className="text-3xl font-light text-blue-500/40 font-mono mb-4 block">01</span>
-            <h4 className="text-base font-semibold text-white mb-2 font-manrope">Kickoff</h4>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Alinhamos visão, metas e oportunidades com base em dados reais e análise de mercado. Uma imersão estratégica para construir um plano de ação claro e eficiente.
-            </p>
+        {/* Vertical Timeline container */}
+        <div className="relative border-l border-blue-500/20 ml-4 md:ml-6 space-y-16 py-2">
+          
+          {/* Step 1 */}
+          <div className="relative pl-8 md:pl-12 group">
+            {/* Sonar Indicator node */}
+            <span className="absolute -left-[9px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-black border border-blue-500/30">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            
+            <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 glass-panel">
+              <span className="text-xs font-mono text-blue-500/60 uppercase tracking-widest mb-1.5 block">01 / Rastreamento (Kickoff)</span>
+              <h4 className="text-lg font-semibold text-white mb-3 font-manrope">Mapeamento e Estratégia</h4>
+              <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                Analisamos o seu nicho de mercado, mapeamos as fraquezas dos concorrentes e traçamos o plano de ataque ideal para garantir que seu site ou automação converta muito mais.
+              </p>
+            </div>
           </div>
 
-          <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 transition-all duration-300 glass-panel">
-            <span className="text-3xl font-light text-blue-500/40 font-mono mb-4 block">02</span>
-            <h4 className="text-base font-semibold text-white mb-2 font-manrope">Execução</h4>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Com o plano em mãos, ativamos o desenvolvimento ágil, integrações inteligentes de IA/dados e um design orientado a alta performance e conversão.
-            </p>
+          {/* Step 2 */}
+          <div className="relative pl-8 md:pl-12 group">
+            {/* Sonar Indicator node */}
+            <span className="absolute -left-[9px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-black border border-blue-500/30">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            
+            <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 glass-panel">
+              <span className="text-xs font-mono text-blue-500/60 uppercase tracking-widest mb-1.5 block">02 / O Ataque (Execução)</span>
+              <h4 className="text-lg font-semibold text-white mb-3 font-manrope">Desenvolvimento Agressivo</h4>
+              <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                Criamos o design premium e desenvolvemos o seu site com foco em velocidade máxima de carregamento. Se contratado, integramos agentes de inteligência artificial com n8n para rodar nos bastidores da sua empresa.
+              </p>
+            </div>
           </div>
 
-          <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 transition-all duration-300 glass-panel">
-            <span className="text-3xl font-light text-blue-500/40 font-mono mb-4 block">03</span>
-            <h4 className="text-base font-semibold text-white mb-2 font-manrope">Handoff & Lançamento</h4>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Entregamos tudo o que seu projeto precisa para crescer de verdade: documentação, suporte operacional e estrutura completa com liberdade total de operação.
-            </p>
+          {/* Step 3 */}
+          <div className="relative pl-8 md:pl-12 group">
+            {/* Sonar Indicator node */}
+            <span className="absolute -left-[9px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-black border border-blue-500/30">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            
+            <div className="border border-white/5 bg-zinc-900/10 rounded-[2rem] p-8 hover:bg-zinc-900/20 hover:border-blue-500/20 transition-all duration-300 glass-panel">
+              <span className="text-xs font-mono text-blue-500/60 uppercase tracking-widest mb-1.5 block">03 / Domínio (Handoff & Lançamento)</span>
+              <h4 className="text-lg font-semibold text-white mb-3 font-manrope">Dominação e Autonomia</h4>
+              <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                Seu site vai ao ar indexado e otimizado no Google. Entregamos documentação operacional completa para você e seu time, garantindo controle e independência total sobre o seu produto digital.
+              </p>
+            </div>
           </div>
+
         </div>
       </section>
 
