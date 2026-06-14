@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HologramBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-[-1] bg-black">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-black">
       {/* Spline Background Iframe - Pure Gradient Animation */}
       <iframe
         src="https://my.spline.design/animatedbackgroundgradientforweb-jvJDeBWjMvShkjPKxPRUswLq"
