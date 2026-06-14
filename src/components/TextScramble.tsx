@@ -19,6 +19,10 @@ export const TextScramble: React.FC<TextScrambleProps> = ({
   const [isScrambling, setIsScrambling] = useState(false);
 
   const startScramble = () => {
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      setDisplayText(text);
+      return;
+    }
     if (isScrambling) return;
     setIsScrambling(true);
 

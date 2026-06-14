@@ -272,3 +272,42 @@ div[style*="--border-gradient"] {
 .shimmer-button:hover::after {
   animation: shimmer-gloss 1.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
+
+/* Shark Fin swim / float animation */
+@keyframes shark-fin-swim {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-8px) rotate(-3deg) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.shark-fin-animate {
+  animation: shark-fin-swim 4s ease-in-out infinite;
+}
+
+/* Bite Hover micro-interaction */
+.bite-hover {
+  transition: clip-path 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.bite-hover:hover {
+  animation: bite-animation 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes bite-animation {
+  0% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  30% {
+    clip-path: polygon(0% 0%, 96% 4%, 86% 28%, 96% 44%, 82% 64%, 96% 84%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+

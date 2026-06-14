@@ -41,7 +41,7 @@ export const BorderBeamCard: React.FC<BorderBeamCardProps> = ({
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`group overflow-hidden rounded-[2rem] p-[1px] relative shadow-2xl cursor-pointer transition-all duration-300 ${className}`}
+      className={`group overflow-hidden rounded-[2rem] p-[1px] relative shadow-2xl cursor-pointer transition-all duration-300 bite-hover ${className}`}
     >
       {/* Spinning Conic Beam Border, visible on hover */}
       <div

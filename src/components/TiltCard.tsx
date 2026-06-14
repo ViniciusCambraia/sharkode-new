@@ -43,7 +43,7 @@ export const TiltCard: React.FC<TiltCardProps> = ({ children, className = '' }) 
   return (
     <div
       ref={cardRef}
-      className={`relative group overflow-hidden bg-gradient-to-br from-white/10 to-white/0 rounded-[2rem] p-10 border border-white/5 shadow-2xl backdrop-blur-xl cursor-pointer select-none ${className}`}
+      className={`relative group overflow-hidden bg-gradient-to-br from-white/10 to-white/0 rounded-[2rem] p-10 border border-white/5 shadow-2xl backdrop-blur-xl cursor-pointer select-none bite-hover ${className}`}
       style={{
         transform: transformStyle,
         transition: 'transform 0.15s ease-out, border-color 0.3s ease, background-color 0.3s ease',

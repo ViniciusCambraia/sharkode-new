@@ -86,6 +86,25 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Shark Fin Scroll Indicator */}
+      <button 
+        onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-28 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 hover:text-blue-400 transition-colors pointer-events-auto z-20 group"
+      >
+        <span className="text-[9px] font-mono tracking-widest uppercase opacity-65 group-hover:opacity-100 transition-opacity">Mergulhar</span>
+        <svg 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="1.5" 
+          className="w-6 h-6 shark-fin-animate"
+        >
+          {/* Minimal shark fin SVG path */}
+          <path d="M4 20C4 20 8 18 10 14C12 10 11 5 11 5C11 5 13 9 16 12C19 15 20 16 20 20" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M4 20H20" strokeLinecap="round"/>
+        </svg>
+      </button>
+
       {/* Trusted Partner Logo Marquee */}
       <LogoMarquee />
     </section>

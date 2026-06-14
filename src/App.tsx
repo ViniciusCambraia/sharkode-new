@@ -8,6 +8,7 @@ import { TextScramble } from './components/TextScramble';
 import { showTerminalToast, TerminalToastContainer } from './components/TerminalToast';
 import { Footer } from './components/Footer';
 import { HologramBackground } from './components/HologramBackground';
+import { ROISimulator } from './components/ROISimulator';
 
 export default function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -123,6 +124,9 @@ export default function App() {
         </div>
       </section>
 
+      {/* Interactive AI ROI Simulator */}
+      <ROISimulator />
+
       {/* Portfolio Section */}
       <section id="portfolio" className="relative py-32 border-t border-white/5 bg-zinc-950/20">
         <div className="max-w-7xl mx-auto px-6 z-20 relative">
@@ -195,11 +199,11 @@ export default function App() {
       <section id="process" className="relative py-32 border-t border-white/5 max-w-7xl mx-auto px-6 z-20">
         <div className="flex items-center gap-2 mb-6 opacity-60">
           <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-          <span className="text-xs font-mono text-gray-400 tracking-widest uppercase">03 / Nosso Processo</span>
+          <span className="text-xs font-mono text-gray-400 tracking-widest uppercase">03 / Nosso Plano de Ataque</span>
         </div>
         <h2 className="leading-[1.1] uppercase md:text-5xl text-3xl font-normal text-white tracking-tight font-manrope mb-16 text-reveal-wrapper">
           <span className="text-reveal-content">
-            <TextScramble text="Como transformamos" /> <span className="text-gray-500"><TextScramble text="ideia em produto" /></span>
+            <TextScramble text="Como traçamos" /> <span className="text-gray-500"><TextScramble text="a rota para o sucesso" /></span>
           </span>
         </h2>
 
