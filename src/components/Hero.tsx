@@ -1,17 +1,12 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import { DigitalDust } from './DigitalDust';
 import { TextScramble } from './TextScramble';
 import { LogoMarquee } from './LogoMarquee';
-import { HUDOverlay } from './HUDOverlay';
 import { RollText } from './RollText';
 
 export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-20 overflow-hidden">
-      {/* HUD Overlay Scanline & Corners */}
-      <HUDOverlay />
-
       {/* 7-Column Split Grid Background */}
       <div className="absolute inset-0 grid grid-cols-7 gap-0 opacity-20 pointer-events-none z-0">
         <div className="border-r border-white/5 relative"><div className="absolute bottom-0 inset-x-0 h-[60%] bg-zinc-950/40 border-t border-white/5"></div></div>
@@ -29,17 +24,9 @@ export const Hero: React.FC = () => {
         backgroundSize: '20px 20px'
       }} />
 
-      {/* Digital Dust Particles */}
-      <DigitalDust />
-
       {/* Radial Gradient Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none z-0" />
 
-      {/* Centered Hologram Ring (Central HUD) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 w-[300px] h-[300px] md:w-[500px] md:h-[500px] flex items-center justify-center opacity-60">
-        <div className="w-full h-full rounded-full border border-dashed border-blue-500/20 animate-spin shark-glow" style={{ animationDuration: '60s' }} />
-        <div className="absolute w-[80%] h-[80%] rounded-full border border-white/5 animate-spin" style={{ animationDuration: '40s', animationDirection: 'reverse' }} />
-      </div>
 
       {/* Hero Content */}
       <div className="relative max-w-5xl mx-auto px-6 text-center z-20 flex flex-col items-center mt-20">

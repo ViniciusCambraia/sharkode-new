@@ -8,7 +8,6 @@ import { TextScramble } from './components/TextScramble';
 import { showTerminalToast, TerminalToastContainer } from './components/TerminalToast';
 import { Footer } from './components/Footer';
 import { HologramBackground } from './components/HologramBackground';
-import { DiagnosticConsole } from './components/DiagnosticConsole';
 
 export default function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -300,9 +299,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Floating Diagnostic Console */}
-      <DiagnosticConsole />
     </div>
   );
 }
