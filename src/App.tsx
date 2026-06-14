@@ -61,7 +61,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen relative font-sans selection:bg-blue-500/30 selection:text-orange-200">
+    <div className="text-white min-h-screen relative font-sans selection:bg-blue-500/30 selection:text-orange-200">
       {/* Full-screen WebGL Hologram Background */}
       <HologramBackground />
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const HologramBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-black">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-[-10]">
       {/* Spline Background Iframe - Pure Gradient Animation */}
       <iframe
         src="https://my.spline.design/animatedbackgroundgradientforweb-jvJDeBWjMvShkjPKxPRUswLq"
@@ -11,7 +11,6 @@ export const HologramBackground: React.FC = () => {
         height="100%"
         className="absolute inset-0 w-full h-full pointer-events-none opacity-80"
         style={{ pointerEvents: 'none' }}
-        loading="lazy"
         title="Spline Background"
       />
     </div>
